@@ -2,6 +2,7 @@
 ## Pharmacy Retailer baseline Invoice Price Recommendation System
 - - - -
 ![picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/drug_supply_chain.png "Pharmacy buyer prices")
+Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-example
 - - - -
 ### This System is developed to help Wholesaler's Sales Representatives or Retail Pharmacy Purchasing Team to analyse drug prices by comparing them to baseline (Medicaid)
 ### Accomplished tasks in the Capstone Notebook:  

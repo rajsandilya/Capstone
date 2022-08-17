@@ -1,5 +1,8 @@
 # UC-BH-Capstone
 ## Pharmacy Retailer baseline Invoice Price Recommendation System
+- - - -
+![picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/drug_supply_chain.png "Pharmacy buyer prices")
+- - - -
 ### This System is developed to help Wholesaler's Sales Representatives or Retail Pharmacy Purchasing Team to analyse drug prices by comparing them to baseline (Medicaid)
 ### Accomplished tasks in the Capstone Notebook:  
  * Modeling is done on NADAC (National Average Drug Acquisition Cost) Dataset from Medicaid.gov
@@ -9,4 +12,3 @@
  - - - -
 [Capstone Jupyter Notebook](https://github.com/rajsandilya/Capstone/blob/main/Capstone.ipynb)
 - - - -
-![picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/drug_supply_chain.png "Pharmacy buyer prices")

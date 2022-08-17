@@ -9,4 +9,4 @@
  - - - -
 [Capstone Jupyter Notebook](https://github.com/rajsandilya/Capstone/blob/main/Capstone.ipynb)
 - - - -
-[picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/drug_prices.jpeg "Pharmacy buyer prices")
+![picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/drug_supply_chain.png "Pharmacy buyer prices")

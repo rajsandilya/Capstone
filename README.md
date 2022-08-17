@@ -5,5 +5,8 @@
  * Modeling is done on NADAC (National Average Drug Acquisition Cost) Dataset from Medicaid.gov
  * Exploratory Data Analysis
  * Correlation matrixs and data visualizations 
- *  Ensemble model RandomForestRegressor is used for Modeling
+ *  Ensemble model RandomForestRegressor is used for Modeling'
+ - - - -
 [Capstone Jupyter Notebook](https://github.com/rajsandilya/Capstone/blob/main/Capstone.ipynb)
+- - - -
+[picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/drug_prices.jpeg "Pharmacy buyer prices")

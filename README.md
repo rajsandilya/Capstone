@@ -10,7 +10,7 @@
  * Correlation matrixs and data visualizations 
  * Ensemble model RandomForestRegressor is used for Modeling
  * Model Evaluation is done by comparing predictions with actual data
- * Metrics used is Mean Squared Error
+ * Metrics used is Mean Squared Error, Max Error and R^2 Score
  - - - -
 [Capstone Jupyter Notebook](https://github.com/rajsandilya/Capstone/blob/main/Capstone.ipynb)
 - - - -

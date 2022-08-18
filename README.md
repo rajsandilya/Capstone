@@ -22,6 +22,10 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
 
 #### Results:
 * Model prediction accuracy for both train and test samples is 99%
+* Metrics:
+    * Mean Squared Error: 0.13
+    * Max Error: 20.47
+    * r2_score : 1.0
 
 #### Outline of project
  - - - -

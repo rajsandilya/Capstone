@@ -1,5 +1,5 @@
 ### Pharmacy Retailer baseline Invoice Price Recommendation System
-**Raj Ponukumati**
+**Author: Raj Ponukumati**
 - - - -
 ![picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/drug_supply_chain.png "Pharmacy buyer prices")
 Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-example

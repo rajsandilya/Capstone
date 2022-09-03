@@ -23,11 +23,11 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
  * Based on Generic drug grouping GPPC or GPID, Time seris analysis is also performed 
 
 #### Results:
-* Model prediction score for both train and test samples is 99%
+* Model prediction scores against training set is 99% and test set is 87%
 * Metrics:
-    * Mean Squared Error: 0.13
-    * Max Error: 20.47
-    * r2_score : 1.0
+    * Mean Squared Error: 24.9
+    * Max Error: 278.03
+    * r2_score : 0.88
 
 #### Outline of project
  - - - -

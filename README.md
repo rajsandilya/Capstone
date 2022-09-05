@@ -32,10 +32,10 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
     * r2_score : 0.88
 
 * Time Series ARIMA Model predictions were done on specific groups
-* Results on GPID 65100080100305 (Oxymorphone HCl Tab 5 MG)
-    * Historical average invoice price:  0.512721087985516 
-    * Future average invoice price:  0.5395697904917949
-    * Mean Squared Error 0.0007334907676462974
+    * Results on GPID 65100080100305 (Oxymorphone HCl Tab 5 MG)
+        * Historical average invoice price:  0.512721087985516 
+        * Future average invoice price:  0.5395697904917949
+        * Mean Squared Error 0.0007334907676462974
 
 #### Outline of project
  - - - -

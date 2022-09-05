@@ -20,14 +20,20 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
  * Ensemble model RandomForestRegressor is used for Modeling
  * Model Evaluation is done by comparing predictions with actual data
  * Metrics used is Mean Squared Error, Max Error and R^2 Score
- * Based on Generic drug grouping GPPC or GPID, Time seris analysis is also performed 
+ * Based on Generic drug grouping GPPC or GPID, Time sereis analysis is also performed 
 
 #### Results:
-* Model prediction scores against training set is 99% and test set is 87%
-* Metrics:
+* RandomForestRegressor Model prediction scores against training set is 99% and test set is 87%
+* RandomForestRegressor Model Metrics:
     * Mean Squared Error: 24.9
     * Max Error: 278.03
     * r2_score : 0.88
+
+* Time Series ARIMA Model predictions were done on specific groups
+* Results on GPID 65100080100305 (Oxymorphone HCl Tab 5 MG)
+    * Historical average invoice price:  0.512721087985516 
+    * Future average invoice price:  0.5395697904917949
+    * Mean Squared Error 0.0007334907676462974
 
 #### Outline of project
  - - - -

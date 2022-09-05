@@ -15,13 +15,13 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
 #### Methodology:  
  * Modeling is done on NADAC (National Average Drug Acquisition Cost) Dataset from Medicaid.gov
  * Exploratory Data Analysis
- * Given NADAC dataset is split into three Generic, Brand and OTC
+ * Given NADAC dataset is split into three Generics, Brands and OTCs subsets
  * Major analysis is done on Generics subset
  * Data visualizations are used to understand the data 
  * Ensemble bagging model RandomForestRegressor is used for Modeling
  * Model tuning is done using RandomizedSearchCV
  * Model Evaluation is done by comparing predictions with actual data
- * Metrics used is Mean Squared Error, Max Error and R^2 Score
+ * Metrics used are Mean Squared Error, Max Error and R^2 Score
  * Based on Generic drug grouping GPPC or GPID, Time sereis analysis is also performed 
 
 #### Results:

@@ -45,4 +45,7 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
 - - - -
 
 ##### Contact and Further Information
+##### Next Steps:
+* Create a python class and bring in all capstone methods into it
+
 * sandilya_raj@yahoo.com

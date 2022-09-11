@@ -46,6 +46,11 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
 
 ##### Contact and Further Information
 ##### Next Steps:
-* Create a python class and bring in all capstone methods into it
+* Create two reusable python classses 1) For Regression model 2) For Time Series Model and bring in all functions mentioned in the notebooks
+* Work on NADAF dataset by splitting NDC description column into new columns Generic name, Strength & Form, NLP Can be used for this task. These new columns might help our regression model.
+* To create chat bot that recommends medication when illness is entered (Use NLP)
+* Convert this into a classification model by bringing Therapuetic categories
+    * This Classification model should classify a drug name to its theraputic category
+    * Example: Metformin -> Diabetis
 
 * sandilya_raj@yahoo.com

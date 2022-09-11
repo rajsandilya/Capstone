@@ -40,7 +40,7 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
 #### Outline of project
  - - - -
 [Capstone Main Jupyter Notebook](https://github.com/rajsandilya/Capstone/blob/main/Capstone.ipynb)
-- - - -
+<br>
 [Time Series Jupyter Notebook](https://github.com/rajsandilya/Capstone/blob/main/Timeseries.ipynb)
 - - - -
 

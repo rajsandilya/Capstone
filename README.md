@@ -1,12 +1,17 @@
-### Pharmacy Retailer baseline Invoice Price Recommendation System
+### Pharmacy Retailer Baseline Price Recommendation System
 **Author: Raj Ponukumati**
 - - - -
 ![picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/drug_supply_chain.png "Pharmacy buyer prices")
 Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-example
 - - - -
 #### Executive Summary:
- This ML System is developed to help Drug Wholesaler's Sales Representatives or Retail Pharmacy Purchasing Team to analyse drug prices by comparing them to baseline (Medicaid). Medicaid.gov collects approximate invoice prices payed by retail pharmacies for Medicaid patents (Senior citizens, disabled, Pregnant etc)
-These prices are not actual prices payed by patents that are not eligible for Medicaid, but this data helps to draw a baseline for comparitive purpuses.
+ This ML System is developed to help Drug Wholesaler's Sales Representatives or Retail Pharmacy Purchasing Team to analyse drug prices by comparing them to baseline (Medicaid). Medicaid.gov collects approximate invoice prices payed by retail pharmacies for Medicaid patents (Senior citizens, disabled, Pregnant etc), it is called National Average Drug Acquisition Cost (NADAC) dataset.
+ These prices are not actual prices payed by patents that are not eligible for Medicaid, but this data helps to draw a baseline for comparitive purpuses.
+ In addition to NADAC dataset, a subset of Master Drug Data Base (MDDB) is brought here for cross referring GPID & GPPC grouping and also Wholesale Acquisition Cost (WAC), Awerage Wholesale Price (AWP).
+    * A fine tuned RandomForestRegression model is created to predict prices and utility functions were created to generate reports based on drug groupings GPID & GPPC. 
+    RandomForestRegression model scored 87%.
+    * Found prices changing with time, hence created a ARIMA time series model to forcast the prices. Since NADAC dataset is a mixed bag, Time Series alaysis was done on specific groups with good results.
+
 
 #### Rationale: Pricing calculations are extremely complex in Pharma world. During the customer onboarding process a Wholesaler is lacking a baseline price predicting model.
 

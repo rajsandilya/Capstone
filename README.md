@@ -137,7 +137,7 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
 * To create chat bot that recommends medication when illness is entered (Use NLP)
 * Convert this into a classification model by bringing Therapuetic categories
     * This Classification model should classify a drug name to its theraputic category
-    * Example: Metformin -> Diabetis
+    * Example: Metformin or Biguanides (Group) -> Diabetis type 2 (Illness)
 * For Time Series analysis:
     * Split the Effective_Date column into Year, Month and Day columns, so that Time Series analysis can be done on a granular level.
     * Explore LSTM models

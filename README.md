@@ -79,6 +79,7 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
 
 #### Methodology:  
  * Modelling is done on Generics subset
+ * Sequencial Feature Selection and Column permutation Imporatance are used to select features
  * Regression Model
     * Linear Regression, Lasso and Ridge models gave very low scores 
     * Ensemble bagging model RandomForestRegressor is used for Modeling

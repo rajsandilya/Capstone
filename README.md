@@ -6,12 +6,12 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
 - - - -
 #### Executive Summary:
  This ML System is developed to help Drug Wholesaler's Sales Representatives or Retail Pharmacy Purchasing Team to analyse drug prices by comparing them to baseline (Medicaid). Medicaid.gov collects approximate invoice prices payed by retail pharmacies for Medicaid patents (Senior citizens, disabled, Pregnant etc), it is called National Average Drug Acquisition Cost (NADAC) dataset.<br>
-    These prices are not actual prices payed by patents that are not eligible for Medicaid, which is why this data helps to draw a baseline for comparitive purpuses.In addition to NADAC dataset, a subset of Master Drug Data Base (MDDB) is brought here for cross referring GPID & GPPC grouping and also Wholesale Acquisition Cost (WAC), Average Wholesale Price (AWP).
+    These prices are not actual prices payed by patents that are not eligible for Medicaid, which is why this data helps to draw a baseline for comparitive purpuses. In addition to NADAC dataset, a subset of Master Drug Data Base (MDDB) is brought here for cross referring GPID & GPPC grouping and also Wholesale Acquisition Cost (WAC), Average Wholesale Price (AWP).
 
- * A fine tuned Ensemble bagging RandomForestRegression model is created to predict prices and utility functions were created to generate reports based on drug groupings GPID & GPPC.  RandomForestRegression model scored 87%.
-* Found prices changing with time, hence created a ARIMA time series model to forcast the prices. Since  NADAC dataset is a mixed bag, Time Series analysis was done on specific groups with good results.
+ * A fine tuned Ensemble bagging RandomForestRegression model is developed to predict prices and utility functions were created to generate reports based on drug groupings GPID & GPPC.  RandomForestRegression model scored 87%.
+ * Found specific drug prices changing with time, hence created a ARIMA time series model to forcast the prices. Since  NADAC dataset is a mixed bag, Time Series analysis was done on specific groups and obtained good results.
 
-A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-medicaid) and compare with the country-wide baseline prices or create similar models against their actual Invoice prices (non-medicaid). These models will help Wholesaler's while onboarding a retailer and vice versa.
+A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-medicaid) and compare with the country-wide baseline prices or create similar models against their actual Invoice prices (non-medicaid). These models will help Wholesaler while onboarding a Retailer/Customer and vice versa.
 
 #### Terminology:
  * Types of drugs available:
@@ -25,7 +25,7 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
  * GPPC : Generic Product Packaging Code
     * 8 character code, The first five characters are random and last three represent Package Description, Package Size, Package Size unit of Measure, Package Quantity and Unit Dose / Unit of Use Packaging Code
  * What is the difference between GPID and GPPC grouping from MDDB dataset?
-    * GPPC is a subset of GPID group ( A group of NDCs )
+    * GPPC is a subset of GPID group ( A group of drugs with unique NDCs )
     * Both GPID and GPPC represent the same Generic drug, it's form and strength.
     * The only difference is GPPC contians packing information: size & codes.
     * A GPID can contain many NDCs with different GPPCs.

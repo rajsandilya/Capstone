@@ -5,13 +5,13 @@
 Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-example
 - - - -
 #### Executive Summary:
- This ML System is developed to help Drug Wholesaler's Sales Representatives or Retail Pharmacy Purchasing Team to analyse drug prices by comparing them to baseline (Medicaid). Medicaid.gov collects approximate invoice prices payed by retail pharmacies for Medicaid patents (Senior citizens, disabled, Pregnant etc), it is called National Average Drug Acquisition Cost (NADAC) dataset.<br>
+ This ML System is developed to help Drug Wholesaler's Sales Representatives or Retail Pharmacy Purchasing Team to analyse drug prices by comparing them to baseline (Medicaid). Medicaid.gov collects approximate invoice prices payed by retail pharmacies for Medicaid patients (Senior citizens, disabled, Pregnant etc), it is called National Average Drug Acquisition Cost (NADAC) dataset.<br>
     These prices are not actual prices payed by patents that are not eligible for Medicaid, which is why this data helps to draw a baseline for comparitive purpuses. In addition to NADAC dataset, a subset of Master Drug Data Base (MDDB) is brought here for cross referring GPID & GPPC grouping and also Wholesale Acquisition Cost (WAC), Average Wholesale Price (AWP).
 
  * A fine tuned Ensemble bagging RandomForestRegression model is developed to predict prices and utility functions were created to generate reports based on drug groupings GPID & GPPC.  RandomForestRegression model scored 87%.
- * Found specific drug prices changing with time, hence created a ARIMA time series model to forcast the prices. Since  NADAC dataset is a mixed bag, Time Series analysis was done on specific groups and obtained good results.
+ * Identified specific drug groups, whose prices were changing over time, hence created a ARIMA time series model to forcast the prices. Since NADAC dataset is a mixed bag, Time Series analysis was done on specific groups and obtained good results.
 
-A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-medicaid) and compare with the country-wide baseline prices or create similar models against their actual Invoice prices (non-medicaid). These models will help Wholesaler while onboarding a Retailer/Customer and vice versa.
+A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-medicaid) and compare with the country-wide baseline prices or create similar models against their actual Invoice prices (non-medicaid). These models will help Wholesaler while onboarding a Retailer/Customer and vice versa in contract negotiations.
 
 #### Terminology:
  * Types of drugs available:
@@ -47,7 +47,7 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
  Pricing calculations are extremely complex in Pharma world. During the customer onboarding process a Wholesaler is lacking a baseline price predicting model.
 
 #### Research Question:
- Here, I will be creating a baseline price prediction model that will help Wholesaler's sales representatives while onboarding the customers (retail pharmacies).
+ In this project, I will be creating a baseline price prediction model that will help Wholesaler's sales representatives in contract negotiations while onboarding the customers (retail pharmacies).
 
 #### Data Sources:
  * National Average Drug Acquisition Cost (NADAC) from Medicaid.gov 
@@ -105,7 +105,7 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
     * r2_score : 0.88
 
 * Time Series ARIMA Model predictions were done on specific groups:
-    * Results for GPID 65100080100305 (Oxymorphone HCl Tab 5 MG)
+    * Results for GPID 65100075102005 Oxycodone HCl Soln 5 MG/5ML
         * Historical average predicted invoice price:  0.11
         * Historical average actual invoice price:  0.11
         * Future average forecasted invoice price:  0.11

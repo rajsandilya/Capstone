@@ -11,7 +11,7 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
  * A fine tuned RandomForestRegression model is created to predict prices and utility functions were created to generate reports based on drug groupings GPID & GPPC.  RandomForestRegression model scored 87%.
 * Found prices changing with time, hence created a ARIMA time series model to forcast the prices. Since  NADAC dataset is a mixed bag, Time Series analaysis was done on specific groups with good results.
 
-A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-medicaid) and compare with the country-wide baseline or create models against their actual Invoice prices (non-medicaid). These models will help Wholesaler's while onboarding a retailer and vice versa.
+A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-medicaid) and compare with the country-wide baseline prices or create similar models against their actual Invoice prices (non-medicaid). These models will help Wholesaler's while onboarding a retailer and vice versa.
 
 #### Terminology:
  * Types of drugs available:
@@ -28,7 +28,7 @@ A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-med
     * GPPC is a subset of GPID group ( A group of NDCs )
     * Both GPID and GPPC represent the same Generic drug, it's form and strength.
     * The only difference is GPPC contians packing information: size & codes.
-    * A GPID can contain many NDCs with different GPPCs.ß
+    * A GPID can contain many NDCs with different GPPCs.
  * References:
     * https://data.medicaid.gov/dataset/dfa2ab14-06c2-457a-9e36-5cb6d80f8d93
     * https://dhhr.wv.gov/bms/BMS%20Pharmacy/Documents/NADAC%20Survey.pdf

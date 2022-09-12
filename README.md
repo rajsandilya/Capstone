@@ -11,7 +11,7 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
  * A fine tuned ensemble bagging RandomForestRegression model is developed to predict prices and utility functions were created to generate reports based on drug groupings GPID & GPPC.  RandomForestRegression model scored 87%.
  * Identified specific drug groups, whose prices were changing over time, hence created a ARIMA time series model to forcast the prices. Since NADAC dataset is a mixed bag, Time Series analysis was done on specific groups and obtained good results.
 
-A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-medicaid) and compare with the country-wide baseline prices or create similar models against their actual Invoice prices (non-medicaid). These models will help Wholesaler while onboarding a Retailer/Customer and vice versa in contract negotiations.
+A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-medicaid) and compare with the country-wide baseline prices or create similar regression models against their actual Invoice prices (non-medicaid). These regression models will help Wholesaler while onboarding a Retailer/Customer and vice versa in contract negotiations. The Time Series model will help Wholesalers and Retailers to forcast prices.
 
 #### Terminology:
  * Types of drugs available:

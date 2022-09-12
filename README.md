@@ -91,7 +91,7 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
     * Metrics used are Mean Squred Error and Mean Absolute Percentage Error
 
 #### Results:
-* RandomForestRegressor Model prediction scores against training set is 99% and test set is 87%
+* RandomForestRegressor Model prediction score is 87%
 * RandomForestRegressor Model Metrics:
     * Mean Squared Error: 24.9
     * Max Error: 278.03

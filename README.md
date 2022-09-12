@@ -9,9 +9,9 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
     These prices are not actual prices payed by patents that are not eligible for Medicaid, which is why this data helps to draw a baseline for comparitive purpuses.In addition to NADAC dataset, a subset of Master Drug Data Base (MDDB) is brought here for cross referring GPID & GPPC grouping and also Wholesale Acquisition Cost (WAC), Average Wholesale Price (AWP).
 
  * A fine tuned RandomForestRegression model is created to predict prices and utility functions were created to generate reports based on drug groupings GPID & GPPC.  RandomForestRegression model scored 87%.
-* Found prices changing with time, hence created a ARIMA time series model to forcast the prices. Since  NADAC dataset is a mixed bag, Time Series alaysis was done on specific groups with good results.
+* Found prices changing with time, hence created a ARIMA time series model to forcast the prices. Since  NADAC dataset is a mixed bag, Time Series analaysis was done on specific groups with good results.
 
-A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-medicaid) and compare with the contry-wide baseline or create models against their actual Invoice prices (non-medicaid). These models will help Wholesaler's while onboarding a retailer and vice versa.
+A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-medicaid) and compare with the country-wide baseline or create models against their actual Invoice prices (non-medicaid). These models will help Wholesaler's while onboarding a retailer and vice versa.
 
 #### Terminology:
  * Types of drugs available:
@@ -27,8 +27,15 @@ A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-med
  * What is the difference between GPID and GPPC grouping from MDDB dataset?
     * GPPC is a subset of GPID group ( A group of NDCs )
     * Both GPID and GPPC represent the same Generic drug, it's form and strength.
-    * The only difference is GPPC contians package size.
-    * A GPID can contain many NDCs with different GPPCs.
+    * The only difference is GPPC contians packing information: size & codes.
+    * A GPID can contain many NDCs with different GPPCs.ß
+ * References:
+    * https://data.medicaid.gov/dataset/dfa2ab14-06c2-457a-9e36-5cb6d80f8d93
+    * https://dhhr.wv.gov/bms/BMS%20Pharmacy/Documents/NADAC%20Survey.pdf
+    * https://github.com/rajsandilya/Capstone/blob/main/docs/nadacdatadefinitions.pdf
+    * https://github.com/rajsandilya/Capstone/blob/main/docs/BUS_fact_sheet.pdf
+    * https://github.com/rajsandilya/Capstone/blob/main/docs/nadacmethodology.pdf
+
 
 #### Rationale:
  Pricing calculations are extremely complex in Pharma world. During the customer onboarding process a Wholesaler is lacking a baseline price predicting model.
@@ -71,8 +78,9 @@ A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-med
         * Seasonal decomposition
 
 #### Methodology:  
- * Modelling is done on large Generics subset
+ * Modelling is done on Generics subset
  * Regression Model
+    * Linear Regression, Lasso and Ridge models gave very low scores 
     * Ensemble bagging model RandomForestRegressor is used for Modeling
     * Model tuning is done using RandomizedSearchCV
     * Model Evaluation is done by comparing predictions with actual data
@@ -114,12 +122,14 @@ A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-med
 - - - -
 
 ##### Contact and Further Information
+* Email: sandilya_raj@yahoo.com
+
 ##### Next Steps:
 * Create two reusable python classses 1) For Regression model 2) For Time Series Model and bring in all functions mentioned in the notebooks
-* Work on NADAF dataset by splitting NDC description column into new columns Generic name, Strength & Form, NLP Can be used for this task. These new columns might help our regression model.
+* Work on NADAF dataset by splitting NDC description column into new columns Generic name, Strength & Form, NLP Can be used for this task. These new columns might increase our regression model score.
 * To create chat bot that recommends medication when illness is entered (Use NLP)
 * Convert this into a classification model by bringing Therapuetic categories
     * This Classification model should classify a drug name to its theraputic category
     * Example: Metformin -> Diabetis
 
-* sandilya_raj@yahoo.com
+

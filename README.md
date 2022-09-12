@@ -47,31 +47,31 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
  * National Average Drug Acquisition Cost (NADAC) from Medicaid.gov 
  * Master Drug Data Base (MDDB)
  ##### Data Preperation for Regression Model:<br>
-    * NADAC dataset is split into three Generics, Brands and OTCs subsets 
-    * Major analysis is done on Generics subset and MDDB is cross referenced
-    * NAN/ NULL colums were dropped from Generics dataset
-    * NADAC_Per_Unit is identified as the target column 
-    * Feature Collinearity is checked using:
-        * Variance Infation Factor, Calculating p-values and checking auto-correlation plots
+ * NADAC dataset is split into three Generics, Brands and OTCs subsets 
+ * Major analysis is done on Generics subset and MDDB is cross referenced
+ * NAN/ NULL colums were dropped from Generics dataset
+ * NADAC_Per_Unit is identified as the target column 
+ * Feature Collinearity is checked using:
+    * Variance Infation Factor, Calculating p-values and checking auto-correlation plots
  - - - -
 ![picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/feature-correlation.png "Feature Correlation")
 - - - -
-    * These colums were identified as possible features:
-        * NDC Description
-        * NADAC_Per_Unit
-        * Effective_Date
-        * Pricing_Unit
-        * Explanation_Code
-    * Duplicates columns were dropped from the Generics dataset
-    * Data visualizations are used to understand the data 
+ * These colums were identified as possible features:
+    * NDC Description
+    * NADAC_Per_Unit
+    * Effective_Date
+    * Pricing_Unit
+    * Explanation_Code
+ * Duplicates columns were dropped from the Generics dataset
+ * Data visualizations are used to understand the data 
     
 
  ##### Data Preperation for Time Series Model:<br>
-    * NADAC dataset is split into three Generics, Brands and OTCs subsets 
-    * Major analysis is done on Generics subset and MDDB is cross referenced
-    * Featues of NADAC dataset used for Time Series ARIMA model are:
-        * Effective_Date: Date in MM/DD/YYYY format
-        * NADAC_Per_Unit: Invoice price of a given drug identified by NDC
+ * NADAC dataset is split into three Generics, Brands and OTCs subsets 
+ * Major analysis is done on Generics subset and MDDB is cross referenced
+ * Featues of NADAC dataset used for Time Series ARIMA model are:
+    * Effective_Date: Date in MM/DD/YYYY format
+    * NADAC_Per_Unit: Invoice price of a given drug identified by NDC
     * Data visualizations are used to understand the time series data and to select AR(p) and MA(q) values
         * Auto correlation
         * Partial auto correlation

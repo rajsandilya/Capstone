@@ -38,8 +38,8 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
         * Future average forecasted invoice price:  0.11
         * Actual Future average invoice price:  0.1
         * Mean Squared Error: 0.0004266289208173572
-     <br>   
-    *  Results for GPPC 00959003 Thyroid Tab 15 MG (1/4 Grain)
+
+    *  Results for GPPC 00959003 Thyroid Tab 15 MG (1/4 Grain) 
         * Historical average predicted invoice price:  0.64
         * Historical average actual invoice price:  0.64
         * Future average forecasted invoice price:  0.56

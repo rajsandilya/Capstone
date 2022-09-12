@@ -5,9 +5,8 @@
 Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-example
 - - - -
 #### Executive Summary:
- This ML System is developed to help Drug Wholesaler's Sales Representatives or Retail Pharmacy Purchasing Team to analyse drug prices by comparing them to baseline (Medicaid). Medicaid.gov collects approximate invoice prices payed by retail pharmacies for Medicaid patents (Senior citizens, disabled, Pregnant etc), it is called National Average Drug Acquisition Cost (NADAC) dataset.
- These prices are not actual prices payed by patents that are not eligible for Medicaid, but this data helps to draw a baseline for comparitive purpuses.
-    In addition to NADAC dataset, a subset of Master Drug Data Base (MDDB) is brought here for cross referring GPID & GPPC grouping and also Wholesale Acquisition Cost (WAC), Average Wholesale Price (AWP).
+ This ML System is developed to help Drug Wholesaler's Sales Representatives or Retail Pharmacy Purchasing Team to analyse drug prices by comparing them to baseline (Medicaid). Medicaid.gov collects approximate invoice prices payed by retail pharmacies for Medicaid patents (Senior citizens, disabled, Pregnant etc), it is called National Average Drug Acquisition Cost (NADAC) dataset.<br>
+    These prices are not actual prices payed by patents that are not eligible for Medicaid, which is why this data helps to draw a baseline for comparitive purpuses.In addition to NADAC dataset, a subset of Master Drug Data Base (MDDB) is brought here for cross referring GPID & GPPC grouping and also Wholesale Acquisition Cost (WAC), Average Wholesale Price (AWP).
 
  * A fine tuned RandomForestRegression model is created to predict prices and utility functions were created to generate reports based on drug groupings GPID & GPPC.  RandomForestRegression model scored 87%.
 * Found prices changing with time, hence created a ARIMA time series model to forcast the prices. Since  NADAC dataset is a mixed bag, Time Series alaysis was done on specific groups with good results.
@@ -25,12 +24,11 @@ A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-med
  * Prices involved between Wholesaler to Retailer/ Pharmacy
     * Average Wholesale Price (AWP)
     * Invoice Price (After aplying discounts to Retail Price)
-##### What is the difference between GPID and GPPC grouping from MDDB dataset?
+ * What is the difference between GPID and GPPC grouping from MDDB dataset?
     * GPPC is a subset of GPID group ( A group of NDCs )
     * Both GPID and GPPC represent the same Generic drug, it's form and strength.
     * The only difference is GPPC contians package size.
     * A GPID can contain many NDCs with different GPPCs.
-
 
 #### Rationale:
  Pricing calculations are extremely complex in Pharma world. During the customer onboarding process a Wholesaler is lacking a baseline price predicting model.
@@ -46,7 +44,12 @@ A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-med
     * Major analysis is done on Generics subset and MDDB is cross referenced
     * NAN/ NULL colums were dropped from Generics dataset
     * NADAC_Per_Unit is identified as the target column 
-    * After checking collinearity among the features columns using Variance Infation Factor, Calculating p-values and checking auto-correlation using plots, these colums were identified as possible features:
+    * Feature Collinearity is checked using:
+        * Variance Infation Factor, Calculating p-values and checking auto-correlation plots
+        - - - -
+        ![picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/feature-correlation.png "Feature Correlation")
+        - - - -
+    * These colums were identified as possible features:
         * NDC Description
         * NADAC_Per_Unit
         * Effective_Date
@@ -54,7 +57,7 @@ A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-med
         * Explanation_Code
     * Duplicates columns were dropped from the Generics dataset
     * Data visualizations are used to understand the data 
-    ![picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/feature-correlation.png "Feature Correlation")
+    
 
  ##### Data Preperation for Time Series Model:
     * NADAC dataset is split into three Generics, Brands and OTCs subsets 

@@ -8,8 +8,8 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
  This ML System is developed to help Drug Wholesaler's Sales Representatives or Retail Pharmacy Purchasing Team to analyse drug prices by comparing them to baseline (Medicaid). Medicaid.gov collects approximate invoice prices payed by retail pharmacies for Medicaid patents (Senior citizens, disabled, Pregnant etc), it is called National Average Drug Acquisition Cost (NADAC) dataset.<br>
     These prices are not actual prices payed by patents that are not eligible for Medicaid, which is why this data helps to draw a baseline for comparitive purpuses.In addition to NADAC dataset, a subset of Master Drug Data Base (MDDB) is brought here for cross referring GPID & GPPC grouping and also Wholesale Acquisition Cost (WAC), Average Wholesale Price (AWP).
 
- * A fine tuned RandomForestRegression model is created to predict prices and utility functions were created to generate reports based on drug groupings GPID & GPPC.  RandomForestRegression model scored 87%.
-* Found prices changing with time, hence created a ARIMA time series model to forcast the prices. Since  NADAC dataset is a mixed bag, Time Series analaysis was done on specific groups with good results.
+ * A fine tuned Ensemble bagging RandomForestRegression model is created to predict prices and utility functions were created to generate reports based on drug groupings GPID & GPPC.  RandomForestRegression model scored 87%.
+* Found prices changing with time, hence created a ARIMA time series model to forcast the prices. Since  NADAC dataset is a mixed bag, Time Series analysis was done on specific groups with good results.
 
 A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-medicaid) and compare with the country-wide baseline prices or create similar models against their actual Invoice prices (non-medicaid). These models will help Wholesaler's while onboarding a retailer and vice versa.
 
@@ -46,7 +46,7 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
 #### Data Sources:
  * National Average Drug Acquisition Cost (NADAC) from Medicaid.gov 
  * Master Drug Data Base (MDDB)
- ##### Data Preperation for Regression Model:<br>
+ ##### Data Preperation for Regression Model:
  * NADAC dataset is split into three Generics, Brands and OTCs subsets 
  * Major analysis is done on Generics subset and MDDB is cross referenced
  * NAN/ NULL colums were dropped from Generics dataset
@@ -58,13 +58,13 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
 - - - -
  * These colums were identified as possible features:
     * NDC Description
-    * NADAC_Per_Unit
     * Effective_Date
     * Pricing_Unit
     * Explanation_Code
  * Duplicates columns were dropped from the Generics dataset
  * Data visualizations are used to understand the data 
-    
+ * OneHot Encoder created many columns of NDC Description, hence Label Encoder is used to encode the non-numeric features: 
+    * NDC Description, Effective_Date, Explanation_Code, Pricing_Unit 
 
  ##### Data Preperation for Time Series Model:<br>
  * NADAC dataset is split into three Generics, Brands and OTCs subsets 
@@ -131,5 +131,3 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
 * Convert this into a classification model by bringing Therapuetic categories
     * This Classification model should classify a drug name to its theraputic category
     * Example: Metformin -> Diabetis
-
-

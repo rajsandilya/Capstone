@@ -13,7 +13,7 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
 
 A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-medicaid) and compare with the country-wide baseline prices or create similar regression models against their actual Invoice prices (non-medicaid). These regression models will help Wholesaler while onboarding a Retailer/Customer and vice versa in contract negotiations. The Time Series model will help Wholesalers and Retailers to forcast prices.
 
-#### Terminology:
+#### Pharma Terminology:
  * Types of drugs available:
     * Brands: Patented drugs from manufacturers 
     * Generics: Generic equivalents of brands

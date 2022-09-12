@@ -17,18 +17,24 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
  * Types of drugs available:
     * Brands: Patented drugs from manufacturers 
     * Generics: Generic equivalents of brands
-    * OTCs (Brands or Generics) : Available Over The Counter without prescription   
+    * OTCs (Brands or Generics) : Available Over The Counter without prescription  
+ * NDC : National Drug Code 
+    * (11-digit code maintained by the FDA that includes labeler code(first 4-5 digits), product code & package code (last 5 to 6 digits)
+ * GPID : Generic Product Identifier
+    * 14 Character GPID consists of heirarchy of Drug Group (first 2 chars), Drug Class (first 4 chars), Drug Subclass (first 6 chars), Drug Name(first 8 chars), Drug Name Ext (first 10 chars), Dosage Form (first 12 chars) & Strength (total 14 chars)
+ * GPPC : Generic Product Packaging Code
+    * 8 character code, The first five characters are random and last three represent Package Description, Package Size, Package Size unit of Measure, Package Quantity and Unit Dose / Unit of Use Packaging Code
+ * What is the difference between GPID and GPPC grouping from MDDB dataset?
+    * GPPC is a subset of GPID group ( A group of NDCs )
+    * Both GPID and GPPC represent the same Generic drug, it's form and strength.
+    * The only difference is GPPC contians packing information: size & codes.
+    * A GPID can contain many NDCs with different GPPCs.
  * Prices involved between Manufacturer to Wholesaler
     * Wholesale Acquisition Cost (WAC)
     * Retail Price (To be Sold price to Retailer)
  * Prices involved between Wholesaler to Retailer/ Pharmacy
     * Average Wholesale Price (AWP)
     * Invoice Price (After aplying discounts to Retail Price)
- * What is the difference between GPID and GPPC grouping from MDDB dataset?
-    * GPPC is a subset of GPID group ( A group of NDCs )
-    * Both GPID and GPPC represent the same Generic drug, it's form and strength.
-    * The only difference is GPPC contians packing information: size & codes.
-    * A GPID can contain many NDCs with different GPPCs.
  * References:
     * https://data.medicaid.gov/dataset/dfa2ab14-06c2-457a-9e36-5cb6d80f8d93
     * https://dhhr.wv.gov/bms/BMS%20Pharmacy/Documents/NADAC%20Survey.pdf

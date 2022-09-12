@@ -131,7 +131,7 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
 ##### Contact and Further Information
 * Email: sandilya_raj@yahoo.com
 
-##### Next Steps:
+##### Moving on to Next Steps:
 * Create two reusable python classses 1) For Regression model 2) For Time Series Model and bring in all functions mentioned in the notebooks
 * Natural Language Processing:
     * Work on NADAF dataset by splitting NDC description column into new columns Generic name, Strength & Form, NLP can be utilized for this task. These new columns might increase our regression model score.

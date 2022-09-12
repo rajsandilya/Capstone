@@ -46,7 +46,7 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
 #### Data Sources:
  * National Average Drug Acquisition Cost (NADAC) from Medicaid.gov 
  * Master Drug Data Base (MDDB)
- ##### Data Preperation for Regression Model:
+ ##### Data Preperation for Regression Model:<br>
     * NADAC dataset is split into three Generics, Brands and OTCs subsets 
     * Major analysis is done on Generics subset and MDDB is cross referenced
     * NAN/ NULL colums were dropped from Generics dataset
@@ -66,7 +66,7 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
     * Data visualizations are used to understand the data 
     
 
- ##### Data Preperation for Time Series Model:
+ ##### Data Preperation for Time Series Model:<br>
     * NADAC dataset is split into three Generics, Brands and OTCs subsets 
     * Major analysis is done on Generics subset and MDDB is cross referenced
     * Featues of NADAC dataset used for Time Series ARIMA model are:

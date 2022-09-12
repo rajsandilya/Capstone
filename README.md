@@ -46,9 +46,9 @@ A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-med
     * NADAC_Per_Unit is identified as the target column 
     * Feature Collinearity is checked using:
         * Variance Infation Factor, Calculating p-values and checking auto-correlation plots
-        - - - -
-        ![picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/feature-correlation.png "Feature Correlation")
-        - - - -
+ - - - -
+![picture alt](https://github.com/rajsandilya/Capstone/blob/main/images/feature-correlation.png "Feature Correlation")
+- - - -
     * These colums were identified as possible features:
         * NDC Description
         * NADAC_Per_Unit

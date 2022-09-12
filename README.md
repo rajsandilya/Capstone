@@ -138,4 +138,4 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
 * Convert this into a classification model by bringing Therapuetic categories
     * This Classification model should classify a drug name to its theraputic category
     * Example: Metformin -> Diabetis
-* For Time Series analysis, use LSTM models
+* For Time Series analysis, explore LSTM models

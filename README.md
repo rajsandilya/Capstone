@@ -16,7 +16,7 @@ A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-med
 #### Terminology:
  * Types of drugs available:
     * Brands: Patented drugs from manufacturers 
-    * Generics: Generic equivalents to brands
+    * Generics: Generic equivalents of brands
     * OTCs (Brands or Generics) : Available Over The Counter without prescription   
  * Prices involved between Manufacturer to Wholesaler
     * Wholesale Acquisition Cost (WAC)

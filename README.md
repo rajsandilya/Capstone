@@ -73,29 +73,29 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
     * NDC Description, Effective_Date, Explanation_Code, Pricing_Unit 
 
  ##### Data Preperation for Time Series Model:<br>
- * NADAC dataset is split into three Generics, Brands and OTCs subsets 
- * Major analysis is done on Generics subset and MDDB is cross referenced
+ * NADAC dataset is split into three Generics, Brands and OTCs subsets. 
+ * Major analysis is done on Generics subset and MDDB is cross referenced.
  * Featues of NADAC dataset used for Time Series ARIMA model are:
     * Effective_Date: Date in MM/DD/YYYY format
-    * NADAC_Per_Unit: Invoice price of a given drug identified by NDC
-    * Data visualizations are used to understand the time series data and to select AR(p) and MA(q) values
+    * NADAC_Per_Unit: Invoice price of a given drug identified by NDC.
+    * Data visualizations are used to understand the time series data and to select AR(p) and MA(q) values:
         * Auto correlation
         * Partial auto correlation
         * Seasonal decomposition
 
 #### Methodology:  
- * Modelling is done on Generics subset
- * Sequencial Feature Selection and Column permutation Imporatance are used to select features
+ * Modelling is done on Generics subset.
+ * Sequencial Feature Selection and Column permutation Imporatance are used to select features.
  * Regression Model
-    * Linear Regression, Lasso and Ridge models gave very low scores 
-    * Ensemble bagging model RandomForestRegressor is used for Modeling
-    * Model tuning is done using RandomizedSearchCV
-    * Model Evaluation is done by comparing predictions with actual data
-    * Metrics used are Mean Squared Error, Max Error and R^2 Score
+    * Linear Regression, Lasso and Ridge models gave very low scores. 
+    * Ensemble bagging model RandomForestRegressor is used for Modeling.
+    * Model tuning is done using RandomizedSearchCV.
+    * Model Evaluation is done by comparing predictions with actual data.
+    * Metrics used are Mean Squared Error, Max Error and R^2 Score.
  * Time Series ARIMA Model:
-    * Based on Generic drug grouping GPPC or GPID, Time series analysis is also performed 
-    * Stationary datasets were chosen by using Augmented Dickey-Fuller test 
-    * Metrics used are Mean Squred Error and Mean Absolute Percentage Error
+    * Based on Generic drug grouping GPPC or GPID, Time series analysis is also performed .
+    * Stationary datasets were chosen by using Augmented Dickey-Fuller test. 
+    * Metrics used are Mean Squred Error and Mean Absolute Percentage Error.
 
 #### Results:
 * RandomForestRegressor Model prediction score is 87%
@@ -133,11 +133,13 @@ A Drug Wholesaler or Retailer can introduce their actual Invoice prices (non-med
 
 ##### Next Steps:
 * Create two reusable python classses 1) For Regression model 2) For Time Series Model and bring in all functions mentioned in the notebooks
-* Work on NADAF dataset by splitting NDC description column into new columns Generic name, Strength & Form, NLP Can be used for this task. These new columns might increase our regression model score.
-* To create chat bot that recommends medication when illness is entered (Use NLP)
-* Convert this into a classification model by bringing Therapuetic categories
-    * This Classification model should classify a drug name to its theraputic category
-    * Example: Metformin or Biguanides (Group) -> Diabetis type 2 (Illness)
+* Natural Language Processing:
+    * Work on NADAF dataset by splitting NDC description column into new columns Generic name, Strength & Form, NLP can be utilized for this task. These new columns might increase our regression model score.
+    * To create Chat bot that recommends medication when illness is entered (Use NLP & Classification)
+* Classification:
+    * Convert this into a classification model by bringing Therapuetic categories
+        * This Classification model should classify a drug name to its theraputic category
+        * Example: Metformin or Biguanides (Group) -> Diabetis type 2 (Illness)
 * For Time Series analysis:
     * Split the Effective_Date column into Year, Month and Day columns, so that Time Series analysis can be done on a granular level.
     * Explore LSTM models

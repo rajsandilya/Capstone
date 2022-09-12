@@ -7,17 +7,24 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
 #### Executive Summary:
  This ML System is developed to help Drug Wholesaler's Sales Representatives or Retail Pharmacy Purchasing Team to analyse drug prices by comparing them to baseline (Medicaid). Medicaid.gov collects approximate invoice prices payed by retail pharmacies for Medicaid patents (Senior citizens, disabled, Pregnant etc), it is called National Average Drug Acquisition Cost (NADAC) dataset.
  These prices are not actual prices payed by patents that are not eligible for Medicaid, but this data helps to draw a baseline for comparitive purpuses.
- In addition to NADAC dataset, a subset of Master Drug Data Base (MDDB) is brought here for cross referring GPID & GPPC grouping and also Wholesale Acquisition Cost (WAC), Awerage Wholesale Price (AWP).
+    In addition to NADAC dataset, a subset of Master Drug Data Base (MDDB) is brought here for cross referring GPID & GPPC grouping and also Wholesale Acquisition Cost (WAC), Awerage Wholesale Price (AWP).
 
  * A fine tuned RandomForestRegression model is created to predict prices and utility functions were created to generate reports based on drug groupings GPID & GPPC.  RandomForestRegression model scored 87%.
 * Found prices changing with time, hence created a ARIMA time series model to forcast the prices. Since  NADAC dataset is a mixed bag, Time Series alaysis was done on specific groups with good results.
 
+A Drug Wholesaler or retailer can introduce their actual Invoice prices (non-medicaid) and compare with the contry-wide baseline or create models against their actual Invoice prices (non-medicaid). These models will help Wholesaler's while onboarding a retailer and vice versa.
 
-#### Rationale: Pricing calculations are extremely complex in Pharma world. During the customer onboarding process a Wholesaler is lacking a baseline price predicting model.
 
-#### Research Question: Here, I will be creating a baseline price prediction model that will help Wholesaler's sales representatives while onboarding the customers (retail pharmacies).
+#### Rationale:
+ Pricing calculations are extremely complex in Pharma world. During the customer onboarding process a Wholesaler is lacking a baseline price predicting model.
 
-#### Data Sources: NADAC from Medicaid.gov and Master Drug Data Base (MDDB)
+#### Research Question:
+ Here, I will be creating a baseline price prediction model that will help Wholesaler's sales representatives while onboarding the customers (retail pharmacies).
+
+#### Data Sources:
+ NADAC from Medicaid.gov and Master Drug Data Base (MDDB)
+ Data Preperation:
+    * 
 
 #### Methodology:  
  * Modeling is done on NADAC (National Average Drug Acquisition Cost) Dataset from Medicaid.gov
@@ -25,11 +32,13 @@ Reference: https://www.fda.gov/drugs/drug-shortages/graphic-drug-supply-chain-ex
  * Given NADAC dataset is split into three Generics, Brands and OTCs subsets
  * Major analysis is done on Generics subset
  * Data visualizations are used to understand the data 
- * Ensemble bagging model RandomForestRegressor is used for Modeling
- * Model tuning is done using RandomizedSearchCV
- * Model Evaluation is done by comparing predictions with actual data
- * Metrics used are Mean Squared Error, Max Error and R^2 Score
- * Based on Generic drug grouping GPPC or GPID, Time sereis analysis is also performed 
+ * Regression Model
+    * Ensemble bagging model RandomForestRegressor is used for Modeling
+    * Model tuning is done using RandomizedSearchCV
+    * Model Evaluation is done by comparing predictions with actual data
+    * Metrics used are Mean Squared Error, Max Error and R^2 Score
+* Time Series ARIMA Model:
+    * Based on Generic drug grouping GPPC or GPID, Time sereis analysis is also performed 
 
 #### Results:
 * RandomForestRegressor Model prediction scores against training set is 99% and test set is 87%
